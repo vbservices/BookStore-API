@@ -17,6 +17,9 @@ using System.Reflection;
 using System.IO;
 using BookStore_API.Contracts;
 using BookStore_API.Services;
+using AutoMapper;
+using BookStore_API.Data.Migrations;
+using BookStore_API.Data.Mappings;
 
 namespace BookStore_API
 {
@@ -26,7 +29,7 @@ namespace BookStore_API
         {
             Configuration = configuration;
         }
-
+         
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -43,6 +46,7 @@ namespace BookStore_API
                 .AllowAnyMethod()
                 .AllowAnyHeader());
             });
+            services.AddAutoMapper(typeof(Maps));
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1",new OpenApiInfo { 
                     Title = "Book Store API",
