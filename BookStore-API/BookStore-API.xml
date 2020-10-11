@@ -20,7 +20,7 @@
             <summary>
             Create an Author
             </summary>
-            <param name="author"></param>
+            <param name="authorDTO"></param>
             <returns></returns>
             <returns></returns>
         </member>
@@ -33,6 +33,40 @@
             <returns></returns>
         </member>
         <member name="M:BookStore_API.Controllers.AuthorsController.Delete(System.Int32)">
+            <summary>
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:BookStore_API.Controllers.BooksController.GetBooks">
+            <summary>
+            Get All Books
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BookStore_API.Controllers.BooksController.GetBook(System.Int32)">
+            <summary>
+            Get A Specific Book
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BookStore_API.Controllers.BooksController.Create(BookStore_API.Data.DTOs.BookCreateDTO)">
+            <summary>
+            Create an Book
+            </summary>
+            <param name="bookDTO"></param>
+            <returns></returns>
+            <returns></returns>
+        </member>
+        <member name="M:BookStore_API.Controllers.BooksController.Update(System.Int32,BookStore_API.Data.DTOs.BookUpdateDTO)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="BookDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStore_API.Controllers.BooksController.Delete(System.Int32)">
             <summary>
              </summary>
              <param name="id"></param>
